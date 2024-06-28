@@ -1,1 +1,5 @@
 shiny
+shinywidgets
+pathlib
+pandas
+plotly
