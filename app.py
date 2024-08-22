@@ -12,9 +12,22 @@ ui.page_opts(fillable=True, id="page")
 
 
 # Read the file
-@reactive.calc
-def dataframe():
-    infile = Path(__file__).parent / "data/GE.csv"
-    return pd.read_csv(infile)
+df = pd.read_csv(Path(__file__).parent / "data/GE.csv")
+
+
+with ui.sidebar():
+    ui.input_select("gene","Gene List", choices=df['Gene'])
+
+                
+
+
+
+
+
+
+
+
+
+
 
 
